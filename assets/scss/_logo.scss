@@ -5,6 +5,7 @@
   font-weight: bold;
   font-display: auto;
   font-family: monospace, monospace;
+  cursor: text;
 
   img {
     height: 44px;
@@ -24,13 +25,14 @@
     border: none;
     color: inherit;
     caret-color: transparent;
+    width: 0;
   }
 
   &__cursor {
     display: inline-block;
     width: 10px;
     height: 1rem;
-    background: #fe5186;
+    background-color: $primary-color;
     border-radius: 1px;
     animation: cursor 1s infinite;
   }

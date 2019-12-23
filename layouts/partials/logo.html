@@ -1,6 +1,6 @@
 <div class="logo">
   <span class="logo__mark">></span>
   <span class="logo__text">{{ .Site.Params.Logo.logoText }}</span>
-  <input id="path_input" class="logo__input stretchy" type="text" />
+  <input id="path_input" class="logo__input stretchy" type="text" autofocus/>
   <span class="logo__cursor" style="{{ with .Site.Params.Logo.logoColor }}background-color:{{ . }}{{ end }}"></span>
 </div>

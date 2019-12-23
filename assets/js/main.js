@@ -1,19 +1,17 @@
-var countries = [
-  { label: "United Kingdom", value: "UK" },
-  { label: "United States", value: "US" },
+const pages = [
+  { label: "home", value: "home" },
+  { label: "profile", value: "profile" },
+  { label: "experience", value: "experience" },
+  { label: "exducation", value: "exducation" },
+  { label: "projects", value: "projects" },
+  { label: "skills", value: "skills" },
+  { label: "contact", value: "contact" },
 ];
 
-var input = document.getElementById("path_input");
+const logo = document.getElementsByClassName("logo")[0];
+const input = document.getElementById("path_input");
 
-autocomplete({
-  input: input,
-  fetch: function(text, update) {
-    text = text.toLowerCase();
-    // you can also use AJAX requests instead of preloaded data
-    var suggestions = countries.filter(n => n.label.toLowerCase().startsWith(text));
-    update(suggestions);
-  },
-  onSelect: function(item) {
-    input.value = item.label;
-  },
-});
+logo.onclick = () => {
+  input.focus();
+  input.select();
+}
