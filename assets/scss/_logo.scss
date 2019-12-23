@@ -1,0 +1,50 @@
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-display: auto;
+  font-family: monospace, monospace;
+
+  img {
+    height: 44px;
+  }
+
+  &__mark {
+    margin-right: 5px;
+  }
+
+  &__text,
+  &__input {
+    font-size: 1.125rem;
+  }
+
+  &__input {
+    background: none;
+    border: none;
+    color: inherit;
+    caret-color: transparent;
+  }
+
+  &__cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1rem;
+    background: #fe5186;
+    border-radius: 1px;
+    animation: cursor 1s infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &__cursor {
+        animation: none;
+    }
+  }
+
+}
+
+@keyframes cursor {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
