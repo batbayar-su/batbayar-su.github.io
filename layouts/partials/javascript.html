@@ -1,10 +1,9 @@
-{{ $autocomplete := resources.Get "js/autocomplete.js" }}
 {{ $main := resources.Get "js/main.js" }}
 {{ $menu := resources.Get "js/menu.js" }}
 {{ $prism := resources.Get "js/prism.js" }}
 {{ $theme := resources.Get "js/theme.js" }}
 {{ $stretchy := resources.Get "js/stretchy.js" }}
-{{ $secureJS := slice $autocomplete $main $menu $prism $stretchy $theme | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+{{ $secureJS := slice $main $menu $prism $stretchy $theme | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 
 {{- if .Site.GoogleAnalytics }}
