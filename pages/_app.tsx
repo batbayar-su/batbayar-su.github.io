@@ -1,6 +1,8 @@
 import { createTheme, NextUIProvider } from '@nextui-org/react'
 import type { AppProps } from 'next/app'
 import '../styles/globals.css'
+import '../initializers/firebase'
+import { HeaderMenu } from '../components/HeaderMenu'
 
 const theme = createTheme({
   type: 'dark', // it could be "light" or "dark"
@@ -15,6 +17,7 @@ const theme = createTheme({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <NextUIProvider theme={theme}>
+      <HeaderMenu></HeaderMenu>
       <Component {...pageProps} />
     </NextUIProvider>
   )
